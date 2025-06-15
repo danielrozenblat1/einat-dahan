@@ -1,0 +1,51 @@
+.card {
+  width: 350px;
+margin:3% auto;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+  box-sizing: border-box;
+  font-family: 'Assistant', sans-serif;
+  border-radius: 12px;
+  
+  /* צללים פנימיים בועתיים מיוחדים */
+  box-shadow: 
+    inset -8px -8px 20px rgba(0, 0, 0, 0.05),
+    inset 8px 8px 20px rgba(255, 182, 193, 0.15),
+    inset -4px -4px 12px rgba(222, 222, 222, 0.08),
+    inset 6px 6px 16px rgba(255, 228, 225, 0.2),
+    inset 0 0 30px rgba(255, 255, 255, 0.3);
+}
+
+.image {
+  width: 22%;
+  height: auto;
+
+  object-fit: cover;
+
+  margin-bottom: 12px;
+}
+
+.title {
+  text-align: center;
+  margin: 8px 0;
+  font-size: 1.4rem;
+  color: #333;
+  font-family: 'Assistant', sans-serif;
+}
+
+.description {
+  text-align: center;
+  margin: 0;
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.4;
+  font-family: 'AssistantR', sans-serif;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}

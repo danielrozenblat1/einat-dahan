@@ -1,0 +1,395 @@
+/* Steps.module.css */
+
+.stepsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+  direction: rtl;
+}
+
+.stepWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.stepItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 300px;
+  padding: 1.5rem;
+}
+
+.iconContainer {
+  margin-bottom: 1rem;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stepTitle {
+  font-family: 'Assistant', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0.5rem 0;
+  color: #000000;
+}
+
+.stepDescription {
+  font-family: 'AssistantR', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
+  text-align: center;
+  color: #000000;
+}
+
+.connector {
+  width: 2px;
+  height: 3rem;
+  background: linear-gradient(to bottom, #E8C5C5, #F5E8E8, #E8C5C5);
+  margin: 1rem 0;
+  opacity: 0.6;
+}
+
+/* Responsive Design */
+
+/* מתחת ל-350px */
+@media (max-width: 349px) {
+  .stepsContainer {
+    padding: 1rem 0.5rem;
+  }
+  
+  .stepItem {
+    max-width: 90%;
+    padding: 1rem;
+  }
+  
+  .iconContainer {
+    width: 50%;
+    height: auto;
+    aspect-ratio: 1;
+    margin-bottom: 0.8rem;
+  }
+  
+  .stepTitle {
+    font-size: 1.3rem;
+    margin: 0.3rem 0;
+  }
+  
+  .stepDescription {
+    font-size: 1.1rem;
+    line-height: 1.4;
+  }
+  
+  .connector {
+    height: 2rem;
+    margin: 0.5rem 0;
+  }
+}
+
+/* 350-450px */
+@media (min-width: 350px) and (max-width: 450px) {
+  .stepsContainer {
+    padding: 1.2rem 0.8rem;
+  }
+  
+  .stepItem {
+    max-width: 85%;
+    padding: 1.2rem;
+  }
+  
+  .iconContainer {
+    width: 30%;
+    height: auto;
+    aspect-ratio: 1;
+    margin-bottom: 0.8rem;
+  }
+  
+  .stepTitle {
+    font-size: 1.25rem;
+    margin: 0.4rem 0;
+  }
+  
+  .stepDescription {
+    font-size: 1.05rem;
+    line-height: 1.4;
+  }
+  
+  .connector {
+    height: 2.2rem;
+    margin: 0.6rem 0;
+  }
+}
+
+/* 450-550px */
+@media (min-width: 450px) and (max-width: 550px) {
+  .stepsContainer {
+    padding: 1.4rem 1rem;
+  }
+  
+  .stepItem {
+    max-width: 80%;
+    padding: 1.3rem;
+  }
+  
+  .iconContainer {
+    width: 50%;
+    height: auto;
+    aspect-ratio: 1;
+    margin-bottom: 0.9rem;
+  }
+  
+  .stepTitle {
+    font-size: 1.2rem;
+    margin: 0.4rem 0;
+  }
+  
+  .stepDescription {
+    font-size: 1rem;
+    line-height: 1.45;
+  }
+  
+  .connector {
+    height: 2.4rem;
+    margin: 0.7rem 0;
+  }
+}
+
+/* 550-650px */
+@media (min-width: 550px) and (max-width: 650px) {
+  .stepsContainer {
+    padding: 1.6rem 1rem;
+  }
+  
+  .stepItem {
+    max-width: 350px;
+    padding: 1.4rem;
+  }
+  
+  .iconContainer {
+    width: 85px;
+    height: 85px;
+    margin-bottom: 1rem;
+  }
+  
+  .stepTitle {
+    font-size: 1.15rem;
+    margin: 0.45rem 0;
+  }
+  
+  .stepDescription {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  .connector {
+    height: 2.6rem;
+    margin: 0.8rem 0;
+  }
+}
+
+/* 650-750px */
+@media (min-width: 650px) and (max-width: 750px) {
+  .stepsContainer {
+    padding: 1.8rem 1.2rem;
+  }
+  
+  .stepItem {
+    max-width: 380px;
+    padding: 1.5rem;
+  }
+  
+  .iconContainer {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 1rem;
+  }
+  
+  .stepTitle {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+  }
+  
+  .stepDescription {
+    font-size: 1.05rem;
+    line-height: 1.5;
+  }
+  
+  .connector {
+    height: 2.8rem;
+    margin: 0.9rem 0;
+  }
+}
+
+/* 750-850px */
+@media (min-width: 750px) and (max-width: 850px) {
+  .stepsContainer {
+    padding: 2rem 1.5rem;
+  }
+  
+  .stepItem {
+    max-width: 400px;
+    padding: 1.6rem;
+  }
+  
+  .iconContainer {
+    width: 95px;
+    height: 95px;
+    margin-bottom: 1.1rem;
+  }
+  
+  .stepTitle {
+    font-size: 1.25rem;
+    margin: 0.5rem 0;
+  }
+  
+  .stepDescription {
+    font-size: 1.1rem;
+    line-height: 1.55;
+  }
+  
+  .connector {
+    height: 3rem;
+    margin: 1rem 0;
+  }
+}
+
+/* 850-950px */
+@media (min-width: 850px) and (max-width: 950px) {
+  .stepsContainer {
+    padding: 2.2rem 1.5rem;
+  }
+  
+  .stepItem {
+    max-width: 420px;
+    padding: 1.7rem;
+  }
+  
+  .iconContainer {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 1.2rem;
+  }
+  
+  .stepTitle {
+    font-size: 1.3rem;
+    margin: 0.55rem 0;
+  }
+  
+  .stepDescription {
+    font-size: 1.15rem;
+    line-height: 1.6;
+  }
+  
+  .connector {
+    height: 3.2rem;
+    margin: 1.1rem 0;
+  }
+}
+
+/* 950-1050px */
+@media (min-width: 950px) and (max-width: 1050px) {
+  .stepsContainer {
+    padding: 2.4rem 2rem;
+  }
+  
+  .stepItem {
+    max-width: 450px;
+    padding: 1.8rem;
+  }
+  
+  .iconContainer {
+    width: 105px;
+    height: 105px;
+    margin-bottom: 1.3rem;
+  }
+  
+  .stepTitle {
+    font-size: 1.35rem;
+    margin: 0.6rem 0;
+  }
+  
+  .stepDescription {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+  
+  .connector {
+    height: 3.4rem;
+    margin: 1.2rem 0;
+  }
+}
+
+/* 1050-1150px */
+@media (min-width: 1050px) and (max-width: 1150px) {
+  .stepsContainer {
+    padding: 2.6rem 2rem;
+  }
+  
+  .stepItem {
+    max-width: 480px;
+    padding: 1.9rem;
+  }
+  
+  .iconContainer {
+    width: 110px;
+    height: 110px;
+    margin-bottom: 1.4rem;
+  }
+  
+  .stepTitle {
+    font-size: 1.4rem;
+    margin: 0.65rem 0;
+  }
+  
+  .stepDescription {
+    font-size: 1.25rem;
+    line-height: 1.65;
+  }
+  
+  .connector {
+    height: 3.6rem;
+    margin: 1.3rem 0;
+  }
+}
+
+/* 1150-1250px */
+@media (min-width: 1150px) and (max-width: 1250px) {
+  .stepsContainer {
+    padding: 2.8rem 2.5rem;
+  }
+  
+  .stepItem {
+    max-width: 500px;
+    padding: 2rem;
+  }
+  
+  .iconContainer {
+    width: 115px;
+    height: 115px;
+    margin-bottom: 1.5rem;
+  }
+  
+  .stepTitle {
+    font-size: 1.45rem;
+    margin: 0.7rem 0;
+  }
+  
+  .stepDescription {
+    font-size: 1.3rem;
+    line-height: 1.7;
+  }
+  
+  .connector {
+    height: 3.8rem;
+    margin: 1.4rem 0;
+  }
+}
+

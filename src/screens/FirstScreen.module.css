@@ -1,0 +1,375 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;700&display=swap');
+
+.container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  overflow: hidden;
+  direction: rtl;
+}
+
+.imageContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  display: flex;
+}
+
+.leftImage, .rightImage, .centerImage {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 1;
+  position: relative;
+}
+
+.centerImage {
+  z-index: 2;
+}
+
+.sideImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.backgroundVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* הגדרת הרקע כתמונות */
+.backgroundImage {
+  flex: 1;
+  height: 100%;
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+/* במסכים קטנים - תמונות צד מוסתרות */
+.leftImage, .rightImage {
+  display: none;
+}
+
+/* תמונה מרכזית תמיד מוצגת */
+.centerImage {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.contentBox {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  padding: 1rem;
+  width: 90%;
+  backdrop-filter: blur(5px);
+  background: linear-gradient(
+    135deg,
+    rgba(4, 4, 4, 0.3) 0%,
+    rgba(0, 0, 0, 0.4) 25%,
+    rgba(13, 13, 13, 0.24) 50%,
+    rgba(0, 0, 0, 0.2) 75%,
+    rgba(0, 0, 0, 0.314) 100%
+  );
+  border-radius: 20px;
+  z-index: 10;
+  margin-bottom: 5%;
+  box-shadow:
+    0 6px 20px rgba(255, 192, 203, 0.1),
+    0 4px 12px rgba(0, 0, 0, 0.05),
+    inset 0 0 25px rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 192, 203, 0.25);
+  animation: fadeIn 0.5s ease-out;
+  bottom: 5%;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 20px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+.title {
+  font-family: 'Cinzel', serif;
+  font-size: 2.5rem;
+  font-weight: 500;
+  background: linear-gradient(135deg,
+    #ffc0cb 0%,
+    #fbe9e7 25%,
+    #ffffff 50%,
+    #fbe9e7 75%,
+    #ffc0cb 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  animation: shimmer 20s infinite linear;
+  background-size: 200% auto;
+
+  text-shadow:
+    0 2px 4px rgba(255, 192, 203, 0.4),
+    0 4px 8px rgba(255, 255, 255, 0.3),
+    0 0 12px rgba(255, 182, 193, 0.6);
+}
+
+.subTitle {
+  font-family: 'AssistantR';
+  font-size: 1.4rem;
+
+  background: linear-gradient(135deg,
+    #ffc0cb 0%,
+    #fbe9e7 25%,
+    #ffffff 50%,
+    #fbe9e7 75%,
+    #ffc0cb 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  animation: shimmer 20s infinite linear;
+  background-size: 200% auto;
+
+  text-shadow:
+    0 2px 4px rgba(255, 192, 203, 0.4),
+    0 4px 8px rgba(255, 255, 255, 0.3),
+    0 0 12px rgba(255, 182, 193, 0.6);
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-direction: column; /* תמיד בטור */
+  align-items: center;
+}
+
+.button {
+  width: 100%;
+  max-width: 400px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 192, 203, 0.35) 0%,    /* ורוד עדין יותר חזק */
+    rgba(251, 233, 231, 0.4) 25%,     /* שמנת עדינה יותר חזקה */
+    rgba(255, 255, 255, 0.25) 40%,    /* לבן עדין */
+    rgba(255, 228, 225, 0.35) 60%,    /* שמנת-ורוד */
+    rgba(251, 233, 231, 0.4) 75%,     /* שמנת עדינה */
+    rgba(255, 192, 203, 0.35) 100%    /* ורוד עדין */
+  );
+  color: white;
+  border: 1px solid rgba(255, 192, 203, 0.4);
+  border-radius: 10px;
+  padding: 1.2rem 2rem;
+  font-size: 1.1rem;
+  font-family: 'AssistantR', sans-serif;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-weight: 500;
+  position: relative;
+  overflow: hidden;
+  text-shadow: 
+    0 1px 2px rgba(0, 0, 0, 0.3);
+  box-shadow:
+    /* צללים ורודים עדינים */
+    0 4px 15px rgba(255, 192, 203, 0.12),
+    0 2px 8px rgba(251, 233, 231, 0.08),
+    0 1px 4px rgba(255, 228, 225, 0.06),
+    /* צל פנימי בועתי עדין בגוונים ורודים */
+    inset 0 1px 3px rgba(255, 255, 255, 0.3),
+    inset 0 -1px 3px rgba(255, 192, 203, 0.08),
+    inset 1px 0 3px rgba(251, 233, 231, 0.1),
+    inset -1px 0 3px rgba(255, 228, 225, 0.1);
+  backdrop-filter: blur(15px);
+  letter-spacing: 0.5px;
+}
+
+.button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 192, 203, 0.15),
+    rgba(251, 233, 231, 0.15),
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button:hover::after {
+  left: 100%;
+}
+
+.button:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 192, 203, 0.45) 0%,    /* ורוד חזק יותר בהובר */
+    rgba(251, 233, 231, 0.5) 25%,     /* שמנת חזקה יותר */
+    rgba(255, 255, 255, 0.35) 40%,    /* לבן חזק יותר */
+    rgba(255, 228, 225, 0.45) 60%,    /* שמנת-ורוד חזק */
+    rgba(251, 233, 231, 0.5) 75%,     /* שמנת חזקה */
+    rgba(255, 192, 203, 0.45) 100%    /* ורוד חזק */
+  );
+  transform: translateY(-3px) scale(1.02);
+  box-shadow:
+    /* צללים ורודים מוגברים אך עדינים */
+    0 6px 20px rgba(255, 192, 203, 0.18),
+    0 4px 12px rgba(251, 233, 231, 0.12),
+    0 2px 8px rgba(255, 228, 225, 0.08),
+    /* צל פנימי בועתי מוגבר בגוונים ורודים */
+    inset 0 2px 4px rgba(255, 255, 255, 0.4),
+    inset 0 -2px 4px rgba(255, 192, 203, 0.1),
+    inset 2px 0 4px rgba(251, 233, 231, 0.15),
+    inset -2px 0 4px rgba(255, 228, 225, 0.15);
+  border-color: rgba(255, 192, 203, 0.6);
+}
+
+.button:active {
+  transform: translateY(-1px) scale(0.98);
+  box-shadow: 
+    0 6px 20px rgba(255, 192, 203, 0.3),
+    0 4px 10px rgba(251, 233, 231, 0.2),
+    0 2px 8px rgba(255, 228, 225, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3),
+    inset 0 -1px 0 rgba(255, 192, 203, 0.1);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 192, 203, 0.4) 0%,
+    rgba(251, 233, 231, 0.45) 25%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 228, 225, 0.4) 75%,
+    rgba(255, 192, 203, 0.4) 100%
+  );
+}
+
+/* Responsive */
+@media (max-width: 350px) {
+  .contentBox {
+    padding: 0.5rem;
+  }
+  .title {
+    font-size: 2.2rem;
+  }
+  .buttonContainer {
+    flex-direction: row; /* גם במסכים קטנים בשורה */
+    gap: 0.5rem;
+  }
+  .button {
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 20px;
+  }
+  /* תמונות צד מוסתרות */
+  .leftImage, .rightImage {
+    display: none;
+  }
+}
+
+@media (min-width: 350px) {
+  .contentBox {
+    padding: 1.2rem 0.7rem;
+  }
+  .title {
+    font-size: 2.3rem;
+  }
+  .buttonContainer {
+    flex-direction: row; /* בשורה */
+  }
+  /* תמונות צד מוסתרות */
+  .leftImage, .rightImage {
+    display: none;
+  }
+}
+
+@media (min-width: 550px) {
+  .contentBox {
+    padding: 1.8rem;
+  }
+  .title {
+    font-size: 2.5rem;
+    margin-bottom: 1.2rem;
+  }
+  .buttonContainer {
+    flex-direction: column;
+  }
+  /* תמונות צד מוצגות ממסך 550px ומעלה */
+  .leftImage, .rightImage {
+    display: flex;
+  }
+}
+
+@media (min-width: 650px) {
+  .title {
+    font-size: 2.6rem;
+  }
+}
+
+@media (min-width: 750px) {
+  .contentBox {
+    width: 70%;
+  }
+  .title {
+    font-size: 2.8rem;
+  }
+}
+
+@media (min-width: 950px) {
+  .contentBox {
+    width: 60%;
+  }
+  .title {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 1050px) {
+  .contentBox {
+    width: 30%;
+  }
+}
+
+@media (min-width: 1150px) {
+  .title {
+    font-size: 2.7rem;
+  }
+  .contentBox {
+    width: 33%;
+  }
+}

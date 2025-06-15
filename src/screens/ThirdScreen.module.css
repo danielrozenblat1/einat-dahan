@@ -1,0 +1,239 @@
+/* Base styles */
+.row,.smallrow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    direction: rtl;
+    margin: 2% auto;
+  }
+  .smallrow{
+    width: 30%;
+  }
+  .description {
+    font-family: 'AssistantR', sans-serif;
+    text-align: center;
+    direction: rtl;
+    font-size: 1.4rem;
+    width: 75%;
+    margin: 1% auto;
+  }
+  .markedTitle::after {
+    content: "";
+    position: absolute;
+    left: -5px;
+    right: -5px;
+    bottom: 3px;
+    height: 8px;
+    background-color: rgba(134, 85, 69, 0.4);
+    z-index: -1;
+    transform: skew(-12deg) rotate(-1deg);
+    border-radius: 3px;
+  }
+  
+  .title {
+    font-family: "Assistant";
+    text-align: center;
+    direction: rtl;
+    font-size: 2rem;
+
+    margin: 1% auto;
+
+  }
+  
+  .markedTitle {
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+  }
+
+  .arrowContainer {
+    display: flex;
+    justify-content: center;
+    margin: 5% auto 0;
+  }
+  
+  .bounceArrow {
+    animation: bounce 2s infinite ease-in-out;
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  
+  /* Under 350px */
+  @media screen and (max-width: 349px) {
+    .description {
+      font-size: 1rem;
+      width: 90%;
+    }
+    .title {
+      font-size: 1.5rem;
+    }
+    .name {
+      font-size: 2rem;
+    }
+    .row {
+      margin: 4% auto;
+    }
+    .smallrow{
+        width:100%;
+    }
+    .markedTitle::after {
+      height: 8px;
+      bottom: 2px;
+    }
+  }
+  
+  /* 350px - 450px */
+  @media screen and (min-width: 350px) and (max-width: 450px) {
+    .description {
+      font-size: 1.1rem;
+      width: 85%;
+    }
+    .title {
+      font-size: 1.7rem;
+    }
+        .smallrow{
+        width:100%;
+    }
+    .name {
+      font-size: 2.2rem;
+    }
+    .markedTitle::after {
+      height: 9px;
+    }
+  }
+  
+  /* 450px - 550px */
+  @media screen and (min-width: 451px) and (max-width: 550px) {
+    .description {
+      font-size: 1.2rem;
+      width: 80%;
+    }
+    .title {
+      font-size: 2.2rem;
+    }
+        .smallrow{
+        width:100%;
+    }
+    .name {
+      font-size: 2.4rem;
+    }
+    .markedTitle::after {
+      height: 10px;
+    }
+  }
+  
+  /* 550px - 650px */
+  @media screen and (min-width: 551px) and (max-width: 650px) {
+    .description {
+      font-size: 1.25rem;
+      width: 80%;
+    }
+    .title {
+      font-size: 2.3rem;
+    }
+    .name {
+      font-size: 2.5rem;
+    }
+    .markedTitle::after {
+      height: 10px;
+    }
+  }
+  
+  /* 650px - 750px */
+  @media screen and (min-width: 651px) and (max-width: 750px) {
+    .description {
+      font-size: 1.3rem;
+      width: 78%;
+    }
+    .title {
+      font-size: 2.4rem;
+    }
+    
+    .name {
+      font-size: 2.6rem;
+    }
+    .markedTitle::after {
+      height: 11px;
+    }
+  }
+  
+  /* 750px - 850px */
+  @media screen and (min-width: 751px) and (max-width: 850px) {
+    .description {
+      font-size: 1.35rem;
+      width: 76%;
+    }
+    .title {
+      font-size: 2.45rem;
+    }
+    .name {
+      font-size: 2.65rem;
+    }
+    .markedTitle::after {
+      height: 11px;
+    }
+  }
+  
+  /* 850px - 950px */
+  @media screen and (min-width: 851px) and (max-width: 950px) {
+    .description {
+      font-size: 1.37rem;
+      width: 75%;
+    }
+    .title {
+      font-size: 2.47rem;
+    }
+    .name {
+      font-size: 2.67rem;
+    }
+  }
+  
+  /* 950px - 1050px */
+  @media screen and (min-width: 951px) and (max-width: 1050px) {
+    .description {
+      font-size: 1.38rem;
+      width: 75%;
+    }
+    .title {
+      font-size: 2.48rem;
+    }
+    .name {
+      font-size: 2.68rem;
+    }
+  }
+  
+  /* 1050px - 1150px */
+  @media screen and (min-width: 1051px) and (max-width: 1150px) {
+    .description {
+      font-size: 1.39rem;
+      width: 75%;
+    }
+    .title {
+      font-size: 2.49rem;
+    }
+    .name {
+      font-size: 2.69rem;
+    }
+  }
+  
+  /* 1150px - 1250px */
+  @media screen and (min-width: 1151px) and (max-width: 1250px) {
+    .description {
+      font-size: 1.4rem;
+      width: 75%;
+    }
+    .title {
+      font-size: 2.5rem;
+    }
+    .name {
+      font-size: 2.7rem;
+    }
+  }

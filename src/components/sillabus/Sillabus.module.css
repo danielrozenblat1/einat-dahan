@@ -1,0 +1,1181 @@
+/* סגנון איפור כלות וערב - שחור וורוד שמנת */
+
+.container {
+   border-radius: 100px 100px 0 0;
+  background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+  font-family: 'Assistant', sans-serif;
+
+}
+
+.wrapper {
+  border-radius: 4rem;
+  padding: 2rem;
+  margin: 0 auto;
+  max-width: 800px;
+  width: 100%;
+  direction: rtl;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.mainTitle {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  background: linear-gradient(135deg, #f4c2c2, #ffb3ba, #ffc9dd, #f4c2c2);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 1px rgba(244, 194, 194, 0.3);
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: #e8e8e8;
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
+
+.courseInfo {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.infoCard {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1.5rem;
+  background: rgba(30, 30, 30, 0.6);
+  border-radius: 1rem;
+  border: 1px solid rgba(244, 194, 194, 0.2);
+  backdrop-filter: blur(4px);
+  transition: all 0.2s ease;
+}
+
+.infoCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(244, 194, 194, 0.15);
+  border: 1px solid rgba(244, 194, 194, 0.3);
+}
+
+.infoIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #f4c2c2;
+}
+
+.infoText {
+  color: #e8e8e8;
+  font-size: 0.95rem;
+  font-family: 'AssistantR', sans-serif;
+}
+
+.expandButtonContainer {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.expandButton {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, #f4c2c2, #ffb3ba);
+  color: #1a1a1a;
+  font-size: 1.1rem;
+  font-weight: 600;
+  font-family: 'AssistantR', sans-serif;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(244, 194, 194, 0.3);
+  margin: 0 auto;
+}
+
+.expandButton:hover {
+  transform: scale(1.05);
+}
+
+.expandIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.sessionsContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.sessionCard {
+  background: rgba(30, 30, 30, 0.7);
+  border-radius: 1rem;
+  padding: 2rem;
+  border: 1px solid rgba(244, 194, 194, 0.2);
+  box-shadow: 0 4px 15px rgba(244, 194, 194, 0.08);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.sessionCard:hover {
+  transform: scale(1.02);
+}
+
+.sessionCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.4;
+  z-index: 0;
+}
+
+/* Session-specific backgrounds */
+.session01::before {
+  background: radial-gradient(circle at top right, rgba(244, 194, 194, 0.15) 0%, rgba(255, 179, 186, 0.05) 100%);
+}
+
+.session02::before {
+  background: radial-gradient(circle at bottom left, rgba(244, 194, 194, 0.15) 0%, rgba(255, 179, 186, 0.05) 100%);
+}
+
+.session03::before {
+  background: radial-gradient(circle at top left, rgba(244, 194, 194, 0.15) 0%, rgba(255, 179, 186, 0.05) 100%);
+}
+
+.session04::before {
+  background: radial-gradient(circle at bottom right, rgba(244, 194, 194, 0.15) 0%, rgba(255, 179, 186, 0.05) 100%);
+}
+
+.session05::before {
+  background: radial-gradient(circle at center, rgba(244, 194, 194, 0.15) 0%, rgba(255, 179, 186, 0.05) 100%);
+}
+
+.session06::before {
+  background: radial-gradient(circle at top center, rgba(244, 194, 194, 0.15) 0%, rgba(255, 179, 186, 0.05) 100%);
+}
+
+.session07::before {
+  background: radial-gradient(circle at bottom center, rgba(244, 194, 194, 0.15) 0%, rgba(255, 179, 186, 0.05) 100%);
+}
+
+.session08::before {
+  background: radial-gradient(circle at left center, rgba(244, 194, 194, 0.15) 0%, rgba(255, 179, 186, 0.05) 100%);
+}
+
+.session09::before {
+  background: radial-gradient(circle at right center, rgba(244, 194, 194, 0.15) 0%, rgba(255, 179, 186, 0.05) 100%);
+}
+
+.session10::before {
+  background: radial-gradient(circle at top right, rgba(244, 194, 194, 0.15) 0%, rgba(255, 179, 186, 0.05) 100%);
+}
+
+.session11::before {
+  background: radial-gradient(circle at bottom left, rgba(244, 194, 194, 0.15) 0%, rgba(255, 179, 186, 0.05) 100%);
+}
+
+.session12::before {
+  background: radial-gradient(circle at top left, rgba(244, 194, 194, 0.15) 0%, rgba(255, 179, 186, 0.05) 100%);
+}
+
+.session13::before {
+  background: radial-gradient(circle at bottom right, rgba(244, 194, 194, 0.15) 0%, rgba(255, 179, 186, 0.05) 100%);
+}
+
+.session14::before {
+  background: radial-gradient(circle at center, rgba(244, 194, 194, 0.15) 0%, rgba(255, 179, 186, 0.05) 100%);
+}
+
+.sessionHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.sessionNumber {
+  font-size: 5.5rem;
+  font-weight: 200;
+  background: linear-gradient(135deg, #f4c2c2, #ffb3ba, #ffc9dd, #f4c2c2);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  line-height: 1;
+  text-shadow: 0 0 1px rgba(244, 194, 194, 0.3);
+}
+
+.sessionTitleContainer {
+  flex: 1;
+}
+
+.sessionTitle {
+  font-size: 1.5rem;
+  color: #e8e8e8;
+  font-weight: 600;
+  margin: 0;
+}
+
+.contentContainer {
+  display: grid;
+  gap: 0.75rem;
+  position: relative;
+  z-index: 2;
+}
+
+.contentItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: rgba(45, 45, 45, 0.7);
+  border-radius: 0.75rem;
+  transition: all 0.2s ease;
+  border: 1px solid rgba(244, 194, 194, 0.1);
+}
+
+.contentItem:hover {
+  transform: translateX(-4px);
+  background: rgba(50, 45, 45, 0.8);
+  border: 1px solid rgba(244, 194, 194, 0.2);
+  box-shadow: 0 2px 10px rgba(244, 194, 194, 0.1);
+}
+
+.contentIconWrapper {
+  color: #f4c2c2;
+}
+
+.contentIcon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.contentText {
+  color: #e8e8e8;
+  font-size: 0.95rem;
+  font-family: 'AssistantR', sans-serif;
+}
+
+/* כפתור הרשמה */
+.registrationButtonContainer {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.registrationButton {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 1.2rem 2.5rem;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 2px solid rgba(244, 194, 194, 0.3);
+  border-radius: 2rem;
+  color: #ffffff;
+  font-family: 'Assistant', sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  overflow: hidden;
+  box-shadow: 
+    0 10px 35px rgba(0, 0, 0, 0.3),
+    0 0 20px rgba(244, 194, 194, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  text-decoration: none;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInCTA 0.8s ease 0.7s forwards;
+}
+
+@keyframes fadeInCTA {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.registrationButton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(244, 194, 194, 0.3),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.registrationButton:hover::before {
+  left: 100%;
+}
+
+.registrationButton:hover {
+  transform: translateY(-8px) scale(1.05);
+  background: rgba(255, 255, 255, 0.12);
+  border: 2px solid rgba(244, 194, 194, 0.5);
+  box-shadow: 
+    0 20px 50px rgba(0, 0, 0, 0.4),
+    0 0 30px rgba(244, 194, 194, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  color: #f4c2c2;
+}
+
+.registrationButton:active {
+  transform: translateY(-5px) scale(1.02);
+}
+
+.registrationIconWrapper {
+  flex-shrink: 0;
+  width: 45px;
+  height: 45px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(244, 194, 194, 0.25);
+  box-shadow: 
+    0 4px 15px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.registrationButton:hover .registrationIconWrapper {
+  transform: rotate(15deg) scale(1.1);
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(244, 194, 194, 0.4);
+  box-shadow: 
+    0 6px 20px rgba(0, 0, 0, 0.25),
+    0 0 15px rgba(244, 194, 194, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.registrationIcon {
+  color: #f4c2c2;
+  font-size: 1.3rem;
+  transition: all 0.3s ease;
+  animation: bounce 2s infinite;
+}
+
+.registrationButton:hover .registrationIcon {
+  color: #f4c2c2;
+  transform: scale(1.1);
+}
+
+.registrationText {
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  transition: all 0.3s ease;
+}
+
+.registrationButton:hover .registrationText {
+  text-shadow: 0 0 10px rgba(244, 194, 194, 0.3);
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-5px);
+  }
+  60% {
+    transform: translateY(-3px);
+  }
+}
+
+.summaryContainer {
+  text-align: center;
+  margin-top: 3rem;
+  padding: 2rem;
+  background: rgba(30, 30, 30, 0.7);
+  border-radius: 1rem;
+  border: 1px solid rgba(244, 194, 194, 0.2);
+}
+
+.summaryTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #f4c2c2;
+  margin-bottom: 1.5rem;
+}
+
+.summaryGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  text-align: right;
+}
+
+.summaryItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #e8e8e8;
+}
+
+.summaryIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #f4c2c2;
+}
+
+/* Form Styles - מותאם לסגנון הסילבוס */
+.formScreenContainer {
+  width: 100%;
+  padding: 2rem 0;
+  color: #e8e8e8;
+  overflow: hidden;
+  margin-top: 1rem;
+}
+
+.titleContainer {
+  position: relative;
+  margin: 2% auto;
+  text-align: center;
+  width: 100%;
+  padding: 0 10px;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  font-family: 'Assistant', sans-serif;
+  text-align: center;
+  direction: rtl;
+  line-height: 1.2;
+  background: linear-gradient(135deg, #f4c2c2, #ffb3ba, #ffc9dd, #f4c2c2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  padding: 0 1rem;
+  z-index: 2;
+}
+
+.formContainer {
+  max-width: 600px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  background: rgba(30, 30, 30, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 1rem;
+  box-shadow: 0 4px 16px rgba(244, 194, 194, 0.15);
+  border: 1px solid rgba(244, 194, 194, 0.2);
+  direction: rtl;
+  box-sizing: border-box;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.label {
+  font-family: 'AssistantR', sans-serif;
+  font-size: 1.1rem;
+  color: #e8e8e8;
+  margin-right: 0.25rem;
+}
+
+.input,
+.textarea {
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  background-color: rgba(45, 45, 45, 0.7);
+  border: 1px solid rgba(244, 194, 194, 0.2);
+  color: #e8e8e8;
+  font-family: 'AssistantR', sans-serif;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.input:focus,
+.textarea:focus {
+  outline: none;
+  border: 1px solid rgba(244, 194, 194, 0.4);
+  box-shadow: 0 0 0 2px rgba(244, 194, 194, 0.1);
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: rgba(232, 232, 232, 0.6);
+}
+
+.inputError {
+  border-color: rgba(220, 53, 69, 0.6);
+  box-shadow: 0 0 0 1px rgba(220, 53, 69, 0.2);
+}
+
+.errorText {
+  color: rgba(255, 99, 71, 0.9);
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  font-family: 'AssistantR', sans-serif;
+}
+
+.submitButton {
+  padding: 0.85rem 1.5rem;
+  margin-top: 0.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  background: linear-gradient(135deg, #f4c2c2, #ffb3ba);
+  color: #1a1a1a;
+  font-family: 'AssistantR', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(244, 194, 194, 0.25);
+}
+
+.submitButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(244, 194, 194, 0.3);
+}
+
+.submitting {
+  background: linear-gradient(135deg, #d8c7c2, #c5b2ac);
+  cursor: not-allowed;
+  opacity: 0.9;
+  color: #1a1a1a;
+}
+
+.submitted {
+  background: linear-gradient(135deg, #c5b2ac, #b29e98);
+  cursor: default;
+  color: #1a1a1a;
+}
+
+/* Responsive styles */
+@media (max-width: 350px) {
+  .container {
+    padding: 1rem;
+    border-radius: 1.5rem;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .wrapper {
+    padding: 0;
+    border-radius: 1.5rem;
+    margin: 1% auto;
+    width: 90%;
+  }
+  
+  .header {
+    margin-bottom: 2rem;
+    text-align: center;
+    padding: 0 1rem;
+  }
+  
+  .mainTitle {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  .subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  .courseInfo {
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .infoCard {
+    padding: 0.5rem 1rem;
+  }
+  
+  .infoText {
+    font-size: 0.85rem;
+  }
+  
+  .expandButtonContainer {
+    text-align: center;
+  }
+  
+  .expandButton {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+  }
+  
+  .sessionsContainer {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    justify-items: center;
+    padding: 0 1rem;
+  }
+  
+  .sessionCard {
+    padding: 1.5rem;
+    width: 85%;
+  }
+  
+  .sessionHeader {
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
+  
+  .sessionNumber {
+    font-size: 3rem;
+  }
+  
+  .sessionTitle {
+    font-size: 1.2rem;
+  }
+  
+  .contentContainer {
+    gap: 0.75rem;
+  }
+  
+  .contentItem {
+    padding: 0.75rem;
+    gap: 0.75rem;
+  }
+  
+  .contentText {
+    font-size: 0.85rem;
+  }
+  
+  .registrationButtonContainer {
+    margin-top: 1.5rem;
+  }
+  
+  .registrationButton {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .registrationIconWrapper {
+    width: 40px;
+    height: 40px;
+  }
+
+  .registrationIcon {
+    font-size: 1.1rem;
+  }
+
+  .registrationText {
+    font-size: 1rem;
+  }
+  
+  .summaryContainer {
+    padding: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .summaryGrid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+  
+  /* Form styles for mobile */
+  .formScreenContainer {
+    padding: 2rem 1rem;
+    margin-top: 2rem;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+    padding: 0 0.5rem;
+  }
+  
+  .formContainer {
+    padding: 1rem 0.5rem;
+    width: 100%;
+  }
+  
+  .label {
+    font-size: 1rem;
+  }
+  
+  .input, 
+  .textarea {
+    padding: 0.6rem 0.8rem;
+  }
+  
+  .submitButton {
+    padding: 0.75rem 1.25rem;
+    font-size: 1rem;
+  }
+}
+
+/* 350px - 450px */
+@media (min-width: 351px) and (max-width: 450px) {
+  .container {
+    padding: 1.2rem;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .wrapper {
+    padding: 0;
+    border-radius: 2rem;
+    margin: 1.2% auto;
+    width: 100%;
+  }
+  
+  .header {
+    margin-bottom: 2.5rem;
+    text-align: center;
+  }
+  
+  .mainTitle {
+    font-size: 2rem;
+    margin-bottom: 1.7rem;
+    text-align: center;
+  }
+  
+  .subtitle {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+  
+  .courseInfo {
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-bottom: 2.2rem;
+  }
+  
+  .infoCard {
+    padding: 0.6rem 1.2rem;
+  }
+  
+  .infoText {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  
+  .expandButtonContainer {
+    text-align: center;
+  }
+  
+  .sessionsContainer {
+    grid-template-columns: 1fr;
+    gap: 2.2rem;
+    justify-items: center;
+  }
+  
+  .sessionCard {
+    padding: 1.7rem;
+    width: 85%;
+  }
+  
+  .sessionHeader {
+    gap: 0.8rem;
+    margin-bottom: 1.2rem;
+  }
+  
+  .sessionNumber {
+    font-size: 3.5rem;
+  }
+  
+  .sessionTitle {
+    font-size: 1.3rem;
+  }
+  
+  .contentContainer {
+    gap: 0.8rem;
+  }
+  
+  .contentItem {
+    padding: 0.8rem;
+    gap: 0.8rem;
+  }
+  
+  .contentText {
+    font-size: 0.9rem;
+  }
+  
+  .registrationButtonContainer {
+    margin-top: 1.7rem;
+  }
+  
+  .registrationButton {
+    padding: 1.1rem 2.2rem;
+    font-size: 1.05rem;
+    gap: 1.2rem;
+  }
+
+  .registrationIconWrapper {
+    width: 42px;
+    height: 42px;
+  }
+
+  .registrationIcon {
+    font-size: 1.15rem;
+  }
+
+  .registrationText {
+    font-size: 1.05rem;
+  }
+  
+  /* Form styles */
+  .formScreenContainer {
+    padding: 0.5rem 0;
+
+  }
+  
+  .title {
+    font-size: 1.7rem;
+    padding: 0 0.6rem;
+  }
+  
+  .formContainer {
+    padding: 1.25rem 0.75rem;
+    width: 100%;
+  }
+  
+  .submitButton {
+    padding: 0.8rem 1.3rem;
+    font-size: 1rem;
+  }
+}
+
+/* 450px - 550px */
+@media (min-width: 451px) and (max-width: 550px) {
+  .container {
+    padding: 1.4rem;
+    border-radius: 2.5rem;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .wrapper {
+    padding: 0;
+    border-radius: 2.5rem;
+    margin: 1.4% auto;
+    width: 93%;
+  }
+  
+  .header {
+    text-align: center;
+  }
+  
+  .mainTitle {
+    font-size: 2.1rem;
+    text-align: center;
+  }
+  
+  .courseInfo {
+    flex-direction: column;
+    gap: 1.3rem;
+  }
+  
+  .expandButtonContainer {
+    text-align: center;
+  }
+  
+  .sessionsContainer {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  
+  .sessionCard {
+    width: 85%;
+  }
+  
+  .sessionNumber {
+    font-size: 4rem;
+  }
+  
+  .registrationButtonContainer {
+    margin-top: 2rem;
+  }
+  
+  .registrationButton {
+    padding: 1.15rem 2.3rem;
+    font-size: 1.1rem;
+    gap: 1.3rem;
+  }
+
+  .registrationIconWrapper {
+    width: 43px;
+    height: 43px;
+  }
+
+  .registrationIcon {
+    font-size: 1.2rem;
+  }
+
+  .registrationText {
+    font-size: 1.1rem;
+  }
+  
+  /* Form styles */
+  .formScreenContainer {
+    padding: 3rem 0;
+
+  }
+  
+  .title {
+    font-size: 1.9rem;
+    padding: 0 0.7rem;
+  }
+  
+  .formContainer {
+    padding: 1.5rem 1rem;
+    width: 100%;
+  }
+}
+
+/* 550px - 650px */
+@media (min-width: 551px) and (max-width: 650px) {
+  .container {
+    padding: 1.6rem;
+    border-radius: 3rem;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .wrapper {
+    padding: 0;
+    border-radius: 3rem;
+  }
+  
+  .header {
+    text-align: center;
+  }
+  
+  .courseInfo {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .expandButtonContainer {
+    text-align: center;
+  }
+  
+  .sessionsContainer {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+  
+  .sessionNumber {
+    font-size: 4.5rem;
+  }
+  
+  .registrationButtonContainer {
+    margin-top: 2.2rem;
+  }
+  
+  .registrationButton {
+    padding: 1.2rem 2.4rem;
+    font-size: 1.15rem;
+    gap: 1.4rem;
+  }
+
+  .registrationIconWrapper {
+    width: 44px;
+    height: 44px;
+  }
+
+  .registrationIcon {
+    font-size: 1.25rem;
+  }
+
+  .registrationText {
+    font-size: 1.15rem;
+  }
+  
+  /* Form styles */
+  .formScreenContainer {
+    padding: 3.5rem 0;
+    margin-top: 3rem;
+  }
+  
+  .title {
+    font-size: 2rem;
+    padding: 0 0.8rem;
+  }
+  
+  .formContainer {
+    width: 90%;
+  }
+}
+
+/* 650px - 750px */
+@media (min-width: 651px) and (max-width: 750px) {
+  .mainTitle {
+    font-size: 2.3rem;
+  }
+  
+  .courseInfo {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .sessionsContainer {
+    grid-template-columns: 1fr;
+  }
+  
+  .registrationButtonContainer {
+    margin-top: 2.5rem;
+  }
+  
+  .registrationButton {
+    padding: 1.25rem 2.5rem;
+    font-size: 1.2rem;
+    gap: 1.5rem;
+  }
+
+  .registrationIconWrapper {
+    width: 45px;
+    height: 45px;
+  }
+
+  .registrationIcon {
+    font-size: 1.3rem;
+  }
+
+  .registrationText {
+    font-size: 1.2rem;
+  }
+
+  .registrationIconWrapper {
+    width: 45px;
+    height: 45px;
+  }
+
+  .registrationIcon {
+    font-size: 1.3rem;
+  }
+
+  .registrationText {
+    font-size: 1.2rem;
+  }
+  
+  /* Form styles */
+  .title {
+    font-size: 2.1rem;
+    padding: 0 0.9rem;
+  }
+}
+
+/* 750px - 900px */
+@media (min-width: 751px) and (max-width: 900px) {
+  .courseInfo {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .sessionsContainer {
+    grid-template-columns: 1fr;
+  }
+  
+  .summaryGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .registrationButtonContainer {
+    margin-top: 2.5rem;
+  }
+  
+  .registrationButton {
+    padding: 1.25rem 2.5rem;
+    font-size: 1.2rem;
+  }
+  
+  /* Form styles */
+  .title {
+    font-size: 2.2rem;
+  }
+}
+
+/* 900px and above - זה כאן שנרצה 2 מפגשים בשורה */
+@media (min-width: 901px) {
+  .wrapper {
+    max-width: 1200px;
+  }
+  
+  .courseInfo {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .sessionsContainer {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  
+  .registrationButtonContainer {
+    grid-column: 1 / -1;
+    margin-top: 3rem;
+  }
+  
+  .registrationButton {
+    padding: 1.25rem 2.5rem;
+    font-size: 1.2rem;
+  }
+
+  .registrationIconWrapper {
+    width: 45px;
+    height: 45px;
+  }
+
+  .registrationIcon {
+    font-size: 1.3rem;
+  }
+
+  .registrationText {
+    font-size: 1.2rem;
+  }
+  
+  .summaryGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* Form styles */
+  .title {
+    font-size: 2.3rem;
+  }
+}

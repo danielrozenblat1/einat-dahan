@@ -1,0 +1,369 @@
+.aboutSection {
+  padding: 120px 0;
+  background: linear-gradient(
+    135deg,
+    rgba(254, 241, 236, 0.9) 0%,
+    rgba(255, 236, 232, 0.8) 25%,
+    rgba(255, 230, 227, 0.85) 50%,
+    rgba(255, 235, 230, 0.8) 75%,
+    rgba(255, 245, 240, 0.9) 100%
+  );
+  direction: rtl;
+  position: relative;
+  overflow: hidden;
+  border-radius: 30px;
+  margin: 0 25px;
+  border: 1px solid rgba(255, 235, 230, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow:
+    0 10px 40px rgba(255, 235, 230, 0.15),
+    0 5px 20px rgba(255, 230, 225, 0.1),
+    inset 0 1px 0 rgba(255, 250, 248, 0.8);
+    border-radius: 100px;
+}
+
+.aboutContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  position: relative;
+  z-index: 2;
+}
+
+.aboutContent {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 100px;
+  align-items: center;
+}
+
+.textContent {
+  padding-right: 80px;
+}
+
+.nameTitle {
+  font-size: 3rem;
+  font-weight: 300;
+  color: #2c1810;
+  margin-bottom: 50px;
+  letter-spacing: -0.5px;
+  position: relative;
+  font-family: 'Assistant', serif;
+  line-height: 1.2;
+}
+
+.nameTitle::after {
+  content: '';
+  position: absolute;
+  bottom: -18px;
+  right: 0;
+  width: 80px;
+  height: 1px;
+  background: linear-gradient(to left, 
+    rgba(255, 182, 193, 0.6), 
+    rgba(255, 182, 193, 0.3), 
+    transparent);
+  border-radius: 1px;
+}
+
+.quote {
+  position: relative;
+  margin: 60px 0 70px 0;
+  padding: 25px 35px;
+  max-width: 400px;
+  background: rgba(255, 250, 248, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 235, 230, 0.6);
+  box-shadow:
+    0 6px 20px rgba(255, 235, 230, 0.2),
+    inset 0 1px 0 rgba(255, 250, 248, 0.8);
+  text-align: center;
+}
+
+.quote::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  right: 35px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid rgba(255, 250, 248, 0.7);
+  border-bottom: 10px solid rgba(255, 250, 248, 0.7);
+}
+
+.quoteMark {
+  font-size: 4rem;
+  color: rgba(255, 182, 193, 0.5);
+  font-family: 'Heebo', serif;
+  position: absolute;
+  font-weight: 300;
+}
+
+.quoteMark:first-child {
+  top: -15px;
+  right: 10px;
+}
+
+.quoteMark:last-child {
+  bottom: -25px;
+  left: 10px;
+  transform: rotate(180deg);
+}
+
+.quoteText {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: #000000;
+  font-style: italic;
+  margin: 0;
+  position: relative;
+  z-index: 2;
+  font-weight: 600;
+  font-family: 'AssistantR', serif;
+}
+
+.story {
+  line-height: 1.8;
+  color: #2c1810;
+  font-family: 'AssistantR', sans-serif;
+}
+
+.storyParagraph {
+  font-size: 1.1rem;
+  margin-bottom: 28px;
+  text-align: center;
+  position: relative;
+  padding: 20px;
+  padding-right: 40px;
+  font-weight: 300;
+  color: #1a0e08;
+  line-height: 1.7;
+  font-family: 'AssistantR', sans-serif;
+  background: rgba(255, 250, 248, 0.5);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 240, 235, 0.6);
+  box-shadow:
+    0 4px 15px rgba(255, 235, 230, 0.1),
+    inset 0 1px 0 rgba(255, 250, 248, 0.6);
+}
+
+.storyParagraph:first-child::before {
+  content: '';
+  position: absolute;
+  right: -20px;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to bottom, 
+    rgba(255, 182, 193, 0.5), 
+    rgba(255, 182, 193, 0.3), 
+    transparent);
+  border-radius: 2px;
+}
+
+.imageContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageContainer {
+  position: relative;
+  width: 320px;
+  height: 420px;
+  border-radius: 25px;
+  overflow: hidden;
+  background: rgba(255, 250, 248, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 235, 230, 0.6);
+  box-shadow:
+    0 15px 40px rgba(255, 235, 230, 0.2),
+    inset 0 1px 0 rgba(255, 250, 248, 0.8);
+}
+
+.imageContainer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 250, 248, 0.1) 0%,
+    transparent 50%,
+    rgba(255, 235, 230, 0.05) 100%
+  );
+  z-index: 2;
+  pointer-events: none;
+  border-radius: 24px;
+}
+
+.profileImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 24px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .aboutSection {
+    margin: 0 20px;
+    border-radius: 25px;
+  }
+  
+  .aboutContainer {
+    padding: 0 35px;
+  }
+  
+  .aboutContent {
+    gap: 80px;
+  }
+  
+  .textContent {
+    padding-right: 60px;
+  }
+}
+
+@media (max-width: 968px) {
+  .aboutSection {
+    padding: 80px 0;
+    margin: 0 15px;
+    border-radius: 20px;
+  }
+  
+  .aboutContent {
+    grid-template-columns: 1fr;
+    gap: 60px;
+    text-align: center;
+  }
+  
+  .textContent {
+    padding-right: 0;
+    order: 2;
+  }
+  
+  .imageContent {
+    order: 1;
+  }
+  
+  .nameTitle {
+    font-size: 2.5rem;
+  }
+  
+  .nameTitle::after {
+    right: 50%;
+    transform: translateX(50%);
+  }
+  
+  .storyParagraph:first-child::before {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .aboutSection {
+    padding: 60px 0;
+    margin: 0 10px;
+    border-radius: 15px;
+  }
+  
+  .aboutContainer {
+    padding: 0 25px;
+  }
+  
+  .nameTitle {
+    font-size: 2.2rem;
+  }
+  
+  .quote {
+    margin: 40px auto 50px auto;
+    padding: 20px 30px;
+    max-width: 350px;
+  }
+  
+  .quoteMark {
+    font-size: 3.5rem;
+  }
+  
+  .quoteMark:first-child {
+    top: -12px;
+    right: 8px;
+  }
+  
+  .quoteMark:last-child {
+    bottom: -20px;
+    left: 8px;
+  }
+  
+  .quoteText {
+    font-size: 1rem;
+  }
+  
+  .storyParagraph {
+    font-size: 1rem;
+    margin-bottom: 24px;
+    padding: 18px;
+    padding-right: 35px;
+  }
+  
+  .imageContainer {
+    width: 280px;
+    height: 360px;
+  }
+}
+
+@media (max-width: 480px) {
+  .aboutSection {
+    padding: 50px 0;
+    margin: 0 5px;
+    border-radius: 12px;
+  }
+  
+  .nameTitle {
+    font-size: 2rem;
+  }
+  
+  .quote {
+    padding: 18px 25px;
+    margin: 30px auto 40px auto;
+    max-width: 300px;
+  }
+  
+  .quoteMark {
+    font-size: 3rem;
+  }
+  
+  .quoteMark:first-child {
+    top: -10px;
+    right: 5px;
+  }
+  
+  .quoteMark:last-child {
+    bottom: -18px;
+    left: 5px;
+  }
+  
+  .quoteText {
+    font-size: 1.1rem;
+  }
+  
+  .storyParagraph {
+    font-size:1.1rem;
+    padding: 15px;
+    padding-right: 30px;
+  }
+  
+  .imageContainer {
+    width: 240px;
+    height: 320px;
+  }
+}

@@ -1,0 +1,471 @@
+/* Base styles */
+.row,.smallrow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    direction: rtl;
+    margin: 2% auto;
+  }
+  .smallrow{
+    width: 30%;
+  }
+  .description {
+    font-family: 'AssistantR', sans-serif;
+    text-align: center;
+    direction: rtl;
+    font-size: 1.4rem;
+    width: 75%;
+    margin: 1% auto;
+    color: #8B7355;
+    line-height: 1.6;
+  }
+  .markedTitle::after {
+    content: "";
+    position: absolute;
+    left: -5px;
+    right: -5px;
+    bottom: 3px;
+    height: 8px;
+    background-color: rgba(234, 189, 176, 0.35);
+    z-index: -1;
+    transform: skew(-12deg) rotate(-1deg);
+    border-radius: 3px;
+  }
+  
+  .title {
+    font-family: "Assistant";
+    text-align: center;
+    direction: rtl;
+    font-size: 2rem;
+    margin: 1% auto;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+  }
+
+  .markedTitle {
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+  }
+
+  .arrowContainer {
+    display: flex;
+    justify-content: center;
+    margin: 5% auto 0;
+  }
+  
+  .bounceArrow {
+    animation: bounce 2s infinite ease-in-out;
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  /* FAQ Styles */
+  .tabsContainer {
+    display: flex;
+    justify-content: center;
+    margin: 3rem auto 2rem;
+    gap: 1rem;
+  }
+
+  .tab {
+    padding: 1rem 2rem;
+    background-color: #F8E8E5;
+    border: 2px solid #F4DDD7;
+    border-radius: 25px;
+    font-family: 'AssistantR', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #8B7355;
+  }
+
+  .tab:hover {
+    background-color: #F5DDD6;
+    border-color: rgba(234, 189, 176, 0.6);
+  }
+
+  .activeTab {
+    background-color: rgba(234, 189, 176, 0.2);
+    border-color: rgba(234, 189, 176, 0.8);
+    color: #8B7355;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Under 350px */
+  @media screen and (max-width: 349px) {
+    .description {
+      font-size: 1rem;
+      width: 90%;
+    }
+    .title {
+      font-size: 1.5rem;
+    }
+    .title::after {
+      width: 150px;
+      height: 6px;
+      bottom: 2px;
+    }
+    .name {
+      font-size: 2rem;
+    }
+    .row {
+      margin: 4% auto;
+    }
+    .smallrow{
+        width:100%;
+    }
+    .markedTitle::after {
+      height: 8px;
+      bottom: 2px;
+    }
+    .tab {
+      padding: 0.6rem 1rem;
+      font-size: 0.85rem;
+    }
+    .tabsContainer {
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .faqQuestion {
+      padding: 1rem;
+      font-size: 1rem;
+    }
+    .faqAnswer {
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+    .faqSection {
+      padding: 0 0.5rem;
+    }
+  }
+  
+  /* 350px - 450px */
+  @media screen and (min-width: 350px) and (max-width: 450px) {
+    .description {
+      font-size: 1.1rem;
+      width: 85%;
+    }
+    .title {
+      font-size: 1.5rem;
+      width:90%;
+      margin:35 auto;
+    }
+    .title::after {
+      width: 160px;
+      height: 7px;
+    }
+    .smallrow{
+        width:100%;
+    }
+    .name {
+      font-size: 2.2rem;
+    }
+    .markedTitle::after {
+      height: 9px;
+    }
+    .tab {
+      padding: 0.7rem 1.2rem;
+      font-size: 0.9rem;
+    }
+    .tabsContainer {
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+  }
+  
+  /* 450px - 550px */
+  @media screen and (min-width: 451px) and (max-width: 550px) {
+    .description {
+      font-size: 1.2rem;
+      width: 80%;
+    }
+    .title {
+      font-size: 2.2rem;
+    }
+    .title::after {
+      width: 170px;
+      height: 7px;
+    }
+    .smallrow{
+        width:100%;
+    }
+    .name {
+      font-size: 2.4rem;
+    }
+    .markedTitle::after {
+      height: 10px;
+    }
+    .tab {
+      padding: 0.8rem 1.4rem;
+      font-size: 0.95rem;
+    }
+    .tabsContainer {
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+  }
+  
+  /* 550px - 650px */
+  @media screen and (min-width: 551px) and (max-width: 650px) {
+    .description {
+      font-size: 1.25rem;
+      width: 80%;
+    }
+    .title {
+      font-size: 2.3rem;
+    }
+    .title::after {
+      width: 180px;
+      height: 8px;
+    }
+    .name {
+      font-size: 2.5rem;
+    }
+    .markedTitle::after {
+      height: 10px;
+    }
+    .tab {
+      padding: 0.85rem 1.5rem;
+      font-size: 1rem;
+    }
+    .tabsContainer {
+      gap: 0.8rem;
+    }
+  }
+  
+  /* 650px - 750px */
+  @media screen and (min-width: 651px) and (max-width: 750px) {
+    .description {
+      font-size: 1.3rem;
+      width: 78%;
+    }
+    .title {
+      font-size: 2.4rem;
+    }
+    .title::after {
+      width: 190px;
+    }
+    .name {
+      font-size: 2.6rem;
+    }
+    .markedTitle::after {
+      height: 11px;
+    }
+    .tab {
+      padding: 0.9rem 1.7rem;
+      font-size: 1rem;
+    }
+    .tabsContainer {
+      gap: 0.8rem;
+    }
+  }
+  
+  /* 750px - 850px */
+  @media screen and (min-width: 751px) and (max-width: 850px) {
+    .description {
+      font-size: 1.35rem;
+      width: 76%;
+    }
+    .title {
+      font-size: 2.45rem;
+    }
+    .name {
+      font-size: 2.65rem;
+    }
+    .markedTitle::after {
+      height: 11px;
+    }
+  }
+  
+  /* 850px - 950px */
+  @media screen and (min-width: 851px) and (max-width: 950px) {
+    .description {
+      font-size: 1.37rem;
+      width: 75%;
+    }
+    .title {
+      font-size: 2.47rem;
+    }
+    .name {
+      font-size: 2.67rem;
+    }
+  }
+  
+  /* 950px - 1050px */
+  @media screen and (min-width: 951px) and (max-width: 1050px) {
+    .description {
+      font-size: 1.38rem;
+      width: 75%;
+    }
+    .title {
+      font-size: 2.48rem;
+    }
+    .name {
+      font-size: 2.68rem;
+    }
+  }
+  
+  /* 1050px - 1150px */
+  @media screen and (min-width: 1051px) and (max-width: 1150px) {
+    .description {
+      font-size: 1.39rem;
+      width: 75%;
+    }
+    .title {
+      font-size: 2.49rem;
+    }
+    .name {
+      font-size: 2.69rem;
+    }
+  }
+  
+  /* 1150px - 1250px */
+  @media screen and (min-width: 1151px) and (max-width: 1250px) {
+    .description {
+      font-size: 1.4rem;
+      width: 75%;
+    }
+    .title {
+      font-size: 2.5rem;
+    }
+    .name {
+      font-size: 2.7rem;
+    }
+  }
+
+  /* FAQ Item Styles */
+  .faqItem {
+    margin-bottom: 1rem;
+    border: 1px solid #F0D4D1;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 500px;
+    margin: 15px auto;
+    direction: rtl;
+    box-shadow: 0 2px 4px rgba(240, 212, 209, 0.25);
+    text-decoration: none;
+  }
+
+  .questionButton {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+    background-color: #FBF2F0;
+    border: none;
+    text-decoration: none;
+    color: #5a4a3f;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .questionButton:hover {
+    background-color: #F7E8E5;
+  }
+
+  .questionText {
+    font-family: 'AssistantR', sans-serif;
+    font-size: 1.2rem;
+    text-align: center;
+    color: #5a4a3f;
+    direction: rtl;
+    flex-grow: 1;
+  }
+
+  .iconWrapper {
+    width: 24px;
+    flex-shrink: 0;
+    color: #E5B3B0;
+    text-decoration: none;
+  }
+
+  .icon {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+  }
+
+  .answerContainer {
+    overflow: hidden;
+    transition: height 0.3s ease;
+    background-color: #FEFCFB;
+    margin: auto;
+    direction: rtl;
+  }
+
+  .answerText {
+    font-family: 'AssistantR', sans-serif;
+    font-size: 1.05rem;
+    padding: 1rem;
+    color: #5a4a3f;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+  }
+
+  /* Accent for links or important text within answers */
+  .answerText a, .answerText strong {
+    color: #E5B3B0;
+  }
+
+  /* Responsive styles for FAQ */
+  @media (max-width: 350px) {
+    .faqItem {
+      width: 280px;
+    }
+    .questionText {
+      font-size: 1rem;
+    }
+    .answerText {
+      font-size: 0.9rem; 
+    }
+  }
+
+  @media (min-width: 350px) and (max-width: 450px) {
+    .faqItem {
+      width: 320px;
+    }
+    .questionText {
+      font-size: 1.05rem;
+    }
+    .answerText {
+      font-size: 0.95rem; 
+    }
+  }
+
+  @media (min-width: 450px) and (max-width: 550px) {
+    .faqItem {
+      width: 400px;
+    }
+    .questionText {
+      font-size: 1.1rem;
+    }
+    .answerText {
+      font-size: 1rem; 
+    }
+  }

@@ -1,0 +1,107 @@
+/* SmallBox.module.css */
+.container {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ margin: 12px auto;
+ background: linear-gradient(to bottom, #ffffff, transparent);
+ padding: 1rem;
+ direction: rtl;
+ width: 140px;
+ height: 140px;
+ border-radius: 15px;
+ position: relative;
+ transition: all 0.3s ease;
+ z-index: 1;
+ border: 1.5px solid rgba(255, 254, 252, 0.6);
+ box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.container:before {
+ content: '';
+ position: absolute;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ backdrop-filter: blur(6px);
+ border-radius: 15px;
+ z-index: -1;
+}
+
+.container:hover {
+ transform: translateY(-2px);
+ border: 1.5px solid rgba(255, 254, 252, 0.6);
+ box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.text {
+ font-family: 'AssistantR', sans-serif;
+ font-size: 1rem;
+ direction: rtl;
+ margin-top: 0.5rem;
+ font-weight: 300;
+ text-align: center;
+ color: #000000;
+}
+
+.icon {
+ width: 40%;
+ height: auto;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ opacity: 0.85;
+}
+
+.container:hover .icon {
+ opacity: 1;
+}
+
+@media (max-width: 350px) {
+ .container {
+   width: 130px;
+   height: 130px;
+   padding: 0.75rem;
+ }
+
+ .text {
+   font-size: 0.9rem;
+   margin-top: 0.4rem;
+ }
+
+ .icon {
+   width: 35%;
+ }
+}
+
+@media (min-width: 351px) and (max-width: 450px) {
+ .container {
+   width: 135px;
+   height: 135px;
+ }
+  .text {
+   font-size:0.9rem;
+   width:100%;
+   margin-top: 0.2rem;
+ }
+  .icon {
+   width: 50%;
+ }
+}
+
+@media (min-width: 1051px) {
+ .container {
+   width: 180px;
+   height: 150px;
+ }
+ 
+ .text {
+   font-size: 1.1rem;
+ }
+  .icon {
+   width: 45%;
+ }
+
+}
