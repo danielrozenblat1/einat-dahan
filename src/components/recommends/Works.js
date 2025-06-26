@@ -6,7 +6,7 @@ import styles from './Recommends.module.css';
 import result1 from "../../images/עינת דהן עבודות 1.png";
 import result2 from "../../images/עינת דהן עבודות 2.png";
 import result3 from "../../images/עינת דהן עבודות 3.png";
-import result4 from "../../images/עינת דהן עבודות 4.png";
+
 import result5 from "../../images/עינת דהן עבודות 5.png";
 
 import result6 from "../../images/עינת דהן עבודות 6.png";
@@ -19,7 +19,7 @@ import result12 from "../../images/עינת דהן עבודות 12.png";
 
 const Works = (props) => {
   const images = [
-   result1,result2,result3,result4, result5, result6, result7, result8, 
+   result1,result2,result3,result5, result6, result7, result8, 
     result9, result10, result11, result12,
   ];
 
