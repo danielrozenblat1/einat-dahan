@@ -1,6 +1,6 @@
 import styles from "./FirstScreen.module.css";
 import { useState, useEffect } from 'react';
-import einat from "../videos/עינת דהן סרטון פתיחה.mp4"
+import einat from "../videos/עינת פתיחה.mp4"
 import einatLeft from "../images/עינת דהן תמונה שמאלית.png"
 import einatright from "../images/עינת דהן תמונה ימנית.png"
 import Loader from "../components/loader/Loader";
