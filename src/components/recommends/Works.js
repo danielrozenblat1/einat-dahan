@@ -16,12 +16,11 @@ import result9 from "../../images/עינת דהן עבודות 9.png";
 import result10 from "../../images/עינת דהן עבודות 10.png";
 import result11 from "../../images/עינת דהן עבודות 11.png";
 import result12 from "../../images/עינת דהן עבודות 12.png";
-import result13 from "../../images/עינת דהן עבודות 13.png";
-import result14 from "../../images/עינת דהן עבודות 14.png";
+
 const Works = (props) => {
   const images = [
    result1,result2,result3,result4, result5, result6, result7, result8, 
-    result9, result10, result11, result12, result13, result14
+    result9, result10, result11, result12,
   ];
 
   return (

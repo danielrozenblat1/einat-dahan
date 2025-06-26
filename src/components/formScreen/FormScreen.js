@@ -173,4 +173,4 @@ const FormScreen = () => {
   );
 };
 
-export default FormScreen;
+export default FormScreen

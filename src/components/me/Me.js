@@ -59,7 +59,7 @@ const AboutSection = () => {
             <div className={styles.quote}>
               <span className={styles.quoteMark}>"</span>
               <p className={styles.quoteText}>
-                תנו לי יד ואני אתן לכן עשר
+          תני לי יד ואני אתן לך עשר- בדרך להצלחה שלך
               </p>
               <span className={styles.quoteMark}>"</span>
             </div>
