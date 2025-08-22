@@ -11,6 +11,7 @@ import RecommendsScreen from './components/RecommendsScreen/RecommendsScreen';
 import ByMe from './components/ByMe/ByMe';
 import ForthScreen from './screens/ForthScreen';
 import FifthScreen from './screens/FifthScreen';
+import PrivacyPolicy from './components/privacy copy/Privacy';
 
 function App() {
   return <>
@@ -20,6 +21,12 @@ function App() {
   <ThirdScreen/>
   <ForthScreen/>
   <FifthScreen/>
+         <PrivacyPolicy 
+  ownerName="עינת דהן" 
+  email="einatd.academy@gmail.com" 
+  phone="+972 52-658-5166" 
+  domain="https://einatdahan.co.il/" 
+/>
   <ByMe/>
   </>
 }

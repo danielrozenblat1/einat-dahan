@@ -9,6 +9,7 @@ import {
 import styles from './Sillabus.module.css';
 import RecommendsScreen from '../RecommendsScreen/RecommendsScreen';
 import EinatEligibilitySection from '../whoFits/WhoFits';
+import PrivacyPolicy from '../privacy/Privacy';
 
 const MakeupSyllabus = () => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -21,6 +22,7 @@ const MakeupSyllabus = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [agreed, setAgreed] = useState(false);
 
   // Form refs
   const fullNameRef = useRef(null);
@@ -46,9 +48,21 @@ const MakeupSyllabus = () => {
     }
   };
 
+  // פונקציה שמונעת מהטופס להגיב על קליק בקישור
+  const handlePrivacyClick = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+  };
+
   // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // בדיקה אם המשתמש אישר את תנאי השימוש ומדיניות הפרטיות
+    if (!agreed) {
+      alert("עליך לאשר את תנאי השימוש ומדיניות הפרטיות");
+      return;
+    }
     
     const name = fullNameRef.current.value;
     const phone = phoneRef.current.value;
@@ -121,6 +135,7 @@ const MakeupSyllabus = () => {
           phoneRef.current.value = "";
           reasonRef.current.value = "";
           setSubmitted(false);
+          setAgreed(false);
         }, 3000);
       } else {
         throw new Error('Failed to submit form');
@@ -426,6 +441,42 @@ const MakeupSyllabus = () => {
                   ref={reasonRef}
                 />
                 {errors.reason && <p className={styles.errorText}>{errors.reason}</p>}
+              </div>
+
+              {/* תיבת האישור למדיניות הפרטיות */}
+              <div style={{ 
+                display: "flex", 
+                justifyContent: "center", 
+                marginTop: "20px",
+                marginBottom: "20px"
+              }}>
+                <label style={{ 
+                  direction: "rtl", 
+                  fontFamily: "AssistantR", 
+                  fontSize: "0.9rem", 
+                  textAlign: "right", 
+                  display: "flex", 
+                  alignItems: "center", 
+                  flexWrap: "wrap", 
+                  gap: "5px" 
+                }}>
+                  <input
+                    type="checkbox"
+                    checked={agreed}
+                    onChange={() => setAgreed(!agreed)}
+                    style={{ marginLeft: "10px" }}
+                  />
+                  קראתי את
+                  <span onClick={handlePrivacyClick}>
+                    <PrivacyPolicy 
+  ownerName="עינת דהן" 
+  email="einatd.academy@gmail.com" 
+  phone="+972 52-658-5166" 
+  domain="https://einatdahan.co.il/" 
+/>
+                  </span>
+                  ואני מאשר/ת
+                </label>
               </div>
               
               <button 
